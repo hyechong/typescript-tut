@@ -1,0 +1,18 @@
+1. npm init --y
+ --> 노드 기본 셋팅
+2. npm i -D typescript ts-node
+3. npm i -D @types/node
+ --> 기본으로 제공하는 타입 이외에 Promise와 같은 별도의 타입을 사용하기 위한 서브 모듈
+4. tsc --init
+ --> tsconfig.json 파일 생성
+5. mkdir -p src/utils
+ --> ["src/**/*"] : tsconfig.json에 설정된 경로에 폴더와 파일 생성
+6. touch src/index.ts
+ --> index.ts파일 생성
+7. package.json 파일 수정
+ -->  "main": "src/index.js",
+      "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "dev" : "ts-node src",
+        "build" : "tsc && node dist"
+      },
